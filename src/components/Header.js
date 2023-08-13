@@ -1,10 +1,35 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { BsSearch, BsThreeDotsVertical } from "react-icons/bs"
 import profile from '../img/profile.png'
 
-function Header() {
+function useScrollDirection() {
+    const [scrollDirection, setScrollDirection] = useState(null);
+  
+    useEffect(() => {
+      let lastScrollY = window.pageYOffset;
+  
+      const updateScrollDirection = () => {
+        const scrollY = window.pageYOffset;
+        const direction = scrollY > lastScrollY ? "down" : "up";
+        if (direction !== scrollDirection && (scrollY - lastScrollY > 8 || scrollY - lastScrollY < -8)) {
+          setScrollDirection(direction);
+        }
+        lastScrollY = scrollY > 0 ? scrollY : 0;
+      };
+      window.addEventListener("scroll", updateScrollDirection); 
+      return () => {
+        window.removeEventListener("scroll", updateScrollDirection); 
+      }
+    }, [scrollDirection]);
+  
+    return scrollDirection;
+};
+
+function Header({setActive, setActiveSearch}) {
+    const scrollDirection = useScrollDirection();
+
     return ( 
-        <header className='flex justify-between items-center  px-8 rounded-lg backdrop-blur-md bg-black/50 absolute top-2 w-[98%] left-1/2 -translate-x-1/2'>
+        <header className={`flex justify-between items-center px-8 rounded-lg backdrop-blur-md bg-black/50 w-[98%] left-[1%] absolute ${ scrollDirection === "down" ? "-top-24 " : "top-2 sticky"} top-2 transition-all duration-500 z-50`}>
             <button href="#" className='relative after:transition-all after:duration-500 hover:after:absolute after:w-10 after:h-10 hover:after:bg-white/20 after:top-1/2 after:-translate-y-1/2 after:left-1/2 after:-translate-x-1/2 after:rounded-full'>
                 <BsThreeDotsVertical />
             </button>
@@ -36,8 +61,8 @@ function Header() {
                 </ul>
             </nav>
             <div className="flex gap-5 items-center">
-                <button><BsSearch /></button>
-                <button className='flex justify-center items-center group py-2 px-6 rounded-lg border-white border-[2px] relative overflow-hidden '>
+                <button onClick={() => setActiveSearch(true)}><BsSearch className='h-5 w-5 hover:fill-[#ff1414] transition-all duration-300'/></button>
+                <button onClick={() => setActive(true)}  className='flex justify-center items-center group py-2 px-6 rounded-lg border-white border-[2px] relative overflow-hidden '>
                     <div className='group-hover:w-[200%] group-hover:h-[500%] group-hover:opacity-100 group-hover:-top-[70px] group-hover:-left-1/2 group-hover:translate-1/2 w-0 h-0 opacity-0 rounded-full bg-white absolute transition-all duration-500 ease-out top-5 left-1/2'></div>
                     <span className='group-hover:text-black relative transition-all duration-700 ease-out text-sm leading-0'>Вход</span>
                 </button>

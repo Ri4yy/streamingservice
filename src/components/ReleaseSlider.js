@@ -1,7 +1,7 @@
 import React from 'react';
 import CardRelease from './CardRelease';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+import { Navigation } from 'swiper/modules';
 import SwiperNavButtons from './SwiperNavButtons';
 import 'swiper/css';
 import 'swiper/css/navigation';

@@ -3,11 +3,13 @@
 @tailwind components;
 @tailwind utilities;
 
+
 body {
     color: #fff;
     font-family: 'Inter', sans-serif;
     background-color: #101113;
 }
+
 
 .container {
     @apply mx-auto max-w-[1240px]
@@ -24,4 +26,12 @@ body {
 
 .swiper-wrapper {
     order: 2;
+}
+
+.modal {
+    @apply opacity-0 transition-all duration-300 -translate-y-[200%]
+}
+
+.modal__active {
+    @apply translate-y-0 transition-all duration-500 ease-linear opacity-100 w-full h-screen bg-black before:top-0 before:left-0 before:absolute before:w-full before:h-screen pointer-events-auto before:bg-[radial-gradient(100%_100%_at_50%_0,hsla(0,92%,58%,0.25)_25%,hsla(240,4%,9%,0.9)_100%)] before:z-[51] fixed top-0 left-0 z-50
 }

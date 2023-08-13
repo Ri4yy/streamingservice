@@ -1,6 +1,6 @@
 import React from 'react';
-import { Swiper, SwiperSlide, useSwiper } from 'swiper/react';
-import { Navigation, Pagination, A11y } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation } from 'swiper/modules';
 import CardUpComing from './CardUpComing';
 import SwiperNavButtons from './SwiperNavButtons';
 import 'swiper/css';
