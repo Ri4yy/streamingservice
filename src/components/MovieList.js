@@ -14,10 +14,10 @@ function MovieList() {
     ]
     return (  
         <div className="bg-[linear-gradient(95.92deg,#bc2fb2_0%,#f55267_49.13%,#feae71_100%)]">
-            <div className="container py-[120px] ">
+            <div className="container md:py-[120px] py-20">
                 <div className="rounded-md backdrop-blur-md bg-white/10 w-fit px-2.5 py-1 text-white/80 text-sm mx-auto">Онлайн-просмотр</div>
-                <h2 className='text-center text-[32px] font-bold'>Недавно вышедшие фильмы</h2>
-                <div className="grid grid-cols-6 gap-x-7 gap-y-12 mt-10">
+                <h2 className='text-center md:text-[32px] text-2xl leading-[1.2] mt-2 font-bold'>Недавно вышедшие фильмы</h2>
+                <div className="grid xl:grid-cols-6 lg:grid-cols-4 md:grid-cols-3 xs:grid-cols-2 gap-x-7 md:gap-y-12 gap-y-8 mt-10">
                     {moviesObj.map((movie) => 
                         <CardMovie key={movie.id} name={movie.name} year={movie.year} genre={movie.genre} rate={movie.rate} img={Spider}/>
                     )}

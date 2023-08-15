@@ -6,7 +6,7 @@ import { SlScreenSmartphone } from 'react-icons/sl';
 function Footer() {
     return (  
         <footer className={`relative py-8 box-border w-full before:content-[''] before:block before:absolute before:top-0 before:left-0 before:right-0 before:bottom-0 before:-z-10 before:origin-center 
-        before:min-h-full before:bg-[url(../img/footer.png)] before:bg-[0%_60%] `}>
+        before:min-h-full before:bg-[url(../img/footer.png)] before:bg-[50%_60%] `}>
             <div className="absolute top-0 left-0 w-full h-full bg-[#111112]/80 -z-10"></div>
             <div className="container flex justify-between items-center z-10">
                 <span className='text-[#BFBFBF]'>© 2021 WMovie</span>

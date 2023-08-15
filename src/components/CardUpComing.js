@@ -4,8 +4,8 @@ function CardUpComing(props) {
     return (  
         <a href="#" className='group'>
             <div className="flex flex-col relative w-full h-[350px] overflow-hidden">
-                <img src={props.img} className='absolute top-0 left-0 rounded-xl -z-10 h-full object-cover overflow-hidden' />
-                <div className="group-hover:translate-y-0 p-10 z-10 mt-auto translate-y-[100%] transition-all duration-700 backdrop-blur-sm bg-black/50 rounded-t-2xl rounded-b-xl">
+                <img src={props.img} className='absolute top-0 left-0 rounded-xl -z-10 h-full object-cover overflow-hidden w-full' />
+                <div className="group-hover:translate-y-0 md:p-10 p-5 z-10 mt-auto md:translate-y-[100%] transition-all duration-700 backdrop-blur-sm bg-black/50 rounded-t-2xl rounded-b-xl">
                     <div className="flex items-center mb-5">
                         <svg width="43" height="22" viewBox="0 0 43 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M43 1.89083C42.8833 0.922265 42.1751 0.150295 41.2733 0C37.3203 0 5.69694 0 1.74393 0C0.756052 0.164717 0 1.07484 0 2.17169C0 3.935 0 18.0384 0 19.801C0 21.0155 0.925061 22 2.06699 22C5.95494 22 37.0623 22 40.9502 22C42.0017 22 42.8699 21.1643 43 20.0826C43 16.4444 43 3.70955 43 1.89083Z" fill="#F6C700"></path>

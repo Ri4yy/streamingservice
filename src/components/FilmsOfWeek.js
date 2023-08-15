@@ -3,9 +3,9 @@ import TrailerPoster from '../img/poster/sp16-9.jpeg';
 
 function FilmsOfWeek() {
     return ( 
-        <div className="py-[120px] bg-[linear-gradient(90deg,#e6aa9d_0%,#be5d6c_100%)] mt-[100px]">
-            <div className="container flex justify-between items-center gap-x-14">
-                <div className="w-[40%]">
+        <div className="xs:py-[120px] py-20 bg-[linear-gradient(90deg,#e6aa9d_0%,#be5d6c_100%)] mt-[100px]">
+            <div className="container flex md:flex-row flex-col justify-between items-center gap-x-14">
+                <div className="md:w-2/5">
                     <div className="rounded-lg backdrop-blur-md bg-white/10 w-fit px-2.5 py-1 text-white/80 text-sm">Мультик</div>
                     <h3 className='font-bold text-[32px] mt-3'>Spider-Man</h3>
                     <div className="flex items-center mt-3">
@@ -24,13 +24,15 @@ function FilmsOfWeek() {
                     <p className='text-[#e8dfde] py-8'>
                         Майлз Моралес отправляется в приключение по мультивселенной вместе с Гвен Стейси и новой командой Людей-пауков, которым предстоит столкнуться с могущественным злодеем.
                     </p>
-                    <div className="flex items-center gap-x-6">
-                        <div className='text-white/80 rounded-md backdrop-blur-md bg-white/10 py-1 px-2.5 z-50'>16+</div>
-                        <a href="#" className='hover:text-[#ff1414] transition-all duration-300'>Подробнее</a>
-                        <a href="#" className='hover:text-[#ff1414] transition-all duration-300'>Смотреть трейлер</a>
+                    <div className="flex md:flex-row flex-col md:items-center gap-x-6 gap-y-2">
+                        <div className='text-white/80 rounded-md backdrop-blur-md bg-white/10 py-1 px-2.5 z-50 w-fit'>16+</div>
+                        <div className="flex items-center gap-x-6">
+                            <a href="#" className='hover:text-[#ff1414] transition-all duration-300'>Подробнее</a>
+                            <a href="#" className='hover:text-[#ff1414] transition-all duration-300'>Смотреть трейлер</a>
+                        </div>
                     </div>
                 </div>
-                <div className="w-[50%] overflow-hidden rounded-xl">
+                <div className="md:w-1/2 overflow-hidden rounded-xl mt-6">
                     <img src={TrailerPoster} className='w-full  overflow-hidden hover:scale-105 transition-all duration-700' />
                 </div>
             </div>

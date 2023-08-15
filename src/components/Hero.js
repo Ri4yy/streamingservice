@@ -3,15 +3,17 @@ import React from 'react';
 
 function Hero() {
     return (  
-        <section className='bg-[url(../img/bg.png)] bg-no-repeat bg-cover bg-center w-full h-screen min-h-[800px] flex flex-col justify-center'>
+        <section className='bg-[url(../img/bg.png)] bg-no-repeat bg-cover bg-center w-full h-screen md:min-h-[800px] flex flex-col justify-center'>
             <div className="container">
-                <div className="rounded-lg backdrop-blur-md bg-black/20 w-fit px-2.5 py-1 text-[#BFBFBF] text-sm">Драма</div>
-                <div className="flex items-center gap-x-2 mt-2">
-                    <div className="typeMovie rounded-md bg-[#2BB157] w-fit px-2.5 py-1 text-white text-sm uppercase">Аниме</div>
-                    <div className="typeMovie rounded-md bg-[#4A90E2] w-fit px-2.5 py-1 text-white text-sm uppercase">4K</div>
-                    <div className="text-white/60">6+</div>
+                <div className="flex md:flex-col flex-row items-center md:items-start gap-x-2 mt-6 md:mt-0">
+                    <div className="rounded-lg backdrop-blur-md h-fit bg-black/20 w-fit px-2.5 py-1 text-[#BFBFBF] text-sm">Драма</div>
+                    <div className="flex items-center gap-x-2 md:mt-2">
+                        <div className="typeMovie rounded-md bg-[#2BB157] w-fit px-2.5 py-1 text-white text-sm uppercase">Аниме</div>
+                        <div className="typeMovie rounded-md bg-[#4A90E2] w-fit px-2.5 py-1 text-white text-sm uppercase">4K</div>
+                        <div className="text-white/60">6+</div>
+                    </div>
                 </div>
-                <h1 className='text-[50px] font-bold w-fit'>Твоё имя</h1>
+                <h1 className='md:text-[50px] text-4xl font-bold w-fit my-4'>Твоё имя</h1>
                 <div className="flex items-center">
                     <svg width="43" height="22" viewBox="0 0 43 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M43 1.89083C42.8833 0.922265 42.1751 0.150295 41.2733 0C37.3203 0 5.69694 0 1.74393 0C0.756052 0.164717 0 1.07484 0 2.17169C0 3.935 0 18.0384 0 19.801C0 21.0155 0.925061 22 2.06699 22C5.95494 22 37.0623 22 40.9502 22C42.0017 22 42.8699 21.1643 43 20.0826C43 16.4444 43 3.70955 43 1.89083Z" fill="#F6C700"></path>
@@ -20,11 +22,10 @@ function Hero() {
                     <span className='pl-2'>8.4</span>
                     <span className='flex items-center relative before:w-1 before:h-1 before:bg-white/30 before:rounded-full before:absolute before:-left-1/2 ml-8 text-white/60'>2016</span>
                 </div>
-                <p className='text-lg text-[#BFBFBF] my-8 w-1/2'>
+                <p className='text-lg text-[#BFBFBF] my-4 lg:my-8 lg:w-1/2 md:w-4/5 md:leading-0 leading-[1.2]'>
                 Действие в аниме Твое имя будет происходить в двух городах. Главными героями является парочка обычных людей, которые даже не подозревают, что вскоре судьба свяжет их жизни очень крепко. Они никогда не были знакомы, она – любимая дочь, которая свое свободное время посвящает работе в храме. Он – надежный друг, успешен и трудолюбив на работе, имеет неплохие задатки талантливого художника. 
-
                 </p>
-                <ul className='flex gap-x-8 items-center'>
+                <ul className='flex md:flex-row flex-col gap-x-8 gap-y-2 md:items-center'>
                     <li><a href="#" className='text-white hover:text-[#ff1414] transition-all duration-300'>Mitsuha Miyamizu</a></li>
                     <li><a href="#" className='text-white hover:text-[#ff1414] transition-all duration-300'>Taki Tachibana</a></li>
                 </ul>

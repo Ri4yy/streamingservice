@@ -13,9 +13,18 @@ import Oppenheimer from '../img/poster/open16-9.jpg';
 function UpComingSlider() {
     return (  
         <div className="container pt-[100px]">
-            <h2 className='text-3xl font-bold'>Предстоящие релизы</h2>
+            <h2 className='md:text-[32px] text-2xl leading-[1.2] font-bold'>Предстоящие релизы</h2>
             <div className="pt-10">
                 <Swiper
+                    breakpoints={{
+                        // when window width is >= 640px
+                        320: {
+                            slidesPerView: 1,
+                        },
+                        769: {
+                            slidesPerView: 2,
+                        },
+                    }}
                     modules={[Navigation]}
                     spaceBetween={20}
                     slidesPerView={2}
@@ -43,7 +52,7 @@ function UpComingSlider() {
                     </SwiperSlide>
                     
                     <div className="flex justify-between items-center pr-[calc((100%-1240px))] mt-12">
-                        <div className="h-[1px] w-full bg-[#323234] mr-10"></div>
+                        <div className="h-[1px] w-full bg-[#323234] md:mr-10 mr-5"></div>
                         <SwiperNavButtons />
                     </div>
                 </Swiper>

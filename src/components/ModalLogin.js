@@ -6,7 +6,7 @@ import { BiSolidLock } from 'react-icons/bi'
 function ModalLogin({active, setActive}) {
     return (  
         <div className={`${active ? 'modal__active' : 'modal'} flex justify-center items-center`}>
-            <div className={`bg-black/30 pt-[60px] px-[50px] pb-[50px] rounded-2xl min-[440px]:w-[440px] w-[90%] h-fit z-[53] ${active ? 'flex ' : 'hidden'} `}>
+            <div className={`bg-black/30 md:pt-[60px] pt-7 md:px-[50px] px-[30px] md:pb-[50px] pb-6 rounded-2xl min-[440px]:w-[440px] w-[90%] h-fit z-[53] ${active ? 'flex ' : 'hidden'} `}>
                 <button onClick={() => setActive(false)} className="flex justify-center items-center absolute top-10 right-12 backdrop-blur-md bg-white/20 rounded-lg hover:rounded-full transition-all duration-300 w-10 h-10 z-[52]">
                     <IoClose className=' h-8 w-8' />
                 </button>

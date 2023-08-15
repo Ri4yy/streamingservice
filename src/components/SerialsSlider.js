@@ -14,6 +14,21 @@ function SerialsSlider() {
             <div className='pt-8'>
             
                 <Swiper
+                breakpoints={{
+                    // when window width is >= 640px
+                    320: {
+                        slidesPerView: 1,
+                    },
+                    580: {
+                        slidesPerView: 2,
+                    },
+                    900: {
+                        slidesPerView: 3,
+                    },
+                    1024: {
+                        slidesPerView: 4,
+                    },
+                }}
                 modules={[Navigation]}
                 spaceBetween={50}
                 slidesPerView={4}
@@ -22,7 +37,7 @@ function SerialsSlider() {
                 className='flex flex-col'
                 >
                     <div className="flex justify-between items-center order-1 mb-12 pt-2">
-                        <h2 className='text-3xl font-bold whitespace-nowrap'>Лучшие сериалы</h2>
+                        <h2 className='md:text-[32px] text-2xl leading-[1.2] font-bold whitespace-nowrap'>Лучшие сериалы</h2>
                         <div className="h-[1px] w-full bg-[#323234] mx-10"></div>
                         <SwiperSerialsButtons />
                     </div>
