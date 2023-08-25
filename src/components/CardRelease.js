@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import DetailMovie from './DetailMovie'
 
 
 function CardRelease(props) {
@@ -8,7 +10,7 @@ function CardRelease(props) {
                 <div className='absolute top-3 right-3 text-white rounded-md backdrop-blur-md bg-black/50 py-1 px-2.5 z-50'>{props.rate}</div>
                 <img src={props.img} className='flex  h-[400px] rounded-lg w-full overflow-hidden object-cover hover:scale-105 transition-all duration-700'/>
             </div>
-            <a href="#" className='text-xl'>{props.name}</a>
+            <Link to='/movies/' className='text-xl'>{props.name}</Link>
             <ul className='flex gap-x-3 items-center'>
                 <li className='text-[#BFBFBF] text-sm'>{props.year}</li>
                 <li><div className='h-1 w-1 rounded-full bg-[#323234]'></div></li>

@@ -37,9 +37,17 @@ body {
 }
 
 .modal__active {
-    @apply translate-y-0 transition-all duration-500 ease-linear opacity-100 w-full h-screen bg-black before:top-0 before:left-0 before:absolute before:w-full before:h-screen pointer-events-auto before:bg-[radial-gradient(100%_100%_at_50%_0,hsla(0,92%,58%,0.25)_25%,hsla(240,4%,9%,0.9)_100%)] before:z-[51] fixed top-0 left-0 z-50
+    @apply translate-y-0 transition-all duration-500 ease-linear opacity-100 w-full h-screen bg-black before:top-0 before:left-0 before:absolute before:w-full before:h-screen pointer-events-auto before:bg-[radial-gradient(100%_100%_at_50%_0,hsla(0,92%,58%,0.25)_25%,hsla(240,4%,9%,0.9)_100%)] before:z-[61] fixed top-0 left-0 z-[60]
 } 
 
 .menu__active {
-    @apply md:hidden translate-y-0 transition-all duration-500 ease-linear opacity-100 w-full h-screen bg-black before:top-0 before:left-0 before:absolute before:w-full before:h-screen pointer-events-auto before:bg-[radial-gradient(100%_100%_at_50%_0,hsla(0,92%,58%,0.25)_25%,hsla(240,4%,9%,0.9)_100%)] before:z-[51] fixed top-0 left-0 z-[60]
+    @apply md:hidden translate-y-0 transition-all duration-500 ease-linear opacity-100 w-full h-screen bg-black before:top-0 before:left-0 before:absolute before:w-full before:h-screen pointer-events-auto before:bg-[radial-gradient(100%_100%_at_50%_0,hsla(0,92%,58%,0.25)_25%,hsla(240,4%,9%,0.9)_100%)] before:z-[61] fixed top-0 left-0 z-[60]
 } 
+
+.map-widget-map-component {
+    filter: brightness(50%);
+	-ms-filter: brightness(50%);
+	-webkit-filter: brightness(50%);
+	-moz-filter: brightness(50%);   
+	-o-filter: brightness(50%);  
+}

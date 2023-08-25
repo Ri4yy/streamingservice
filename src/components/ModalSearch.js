@@ -5,8 +5,8 @@ import { BsSearch } from "react-icons/bs"
 function ModalSearch({activeSearch, setActiveSearch}) {
     return (  
         <div className={`${activeSearch ? 'modal__active' : 'modal'} flex justify-center items-center`}>
-            <div className={`md:w-3/5 xl:w-2/5 w-[90%] h-fit z-[53] ${activeSearch ? 'flex ' : 'hidden'} `}>
-                <button onClick={() => setActiveSearch(false)} className="flex justify-center items-center absolute top-10 right-12 backdrop-blur-md bg-white/20 rounded-lg hover:rounded-full transition-all duration-300 w-10 h-10 z-[52]">
+            <div className={`md:w-3/5 xl:w-2/5 w-[90%] h-fit z-[63] ${activeSearch ? 'flex ' : 'hidden'} `}>
+                <button onClick={() => setActiveSearch(false)} className="flex justify-center items-center absolute top-10 right-12 backdrop-blur-md bg-white/20 rounded-lg hover:rounded-full transition-all duration-300 w-10 h-10 z-[62]">
                     <IoClose className=' h-8 w-8' />
                 </button>
                 <form action="#" mathod="POST" className='w-full'>

@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom'
 
 function Hero() {
     return (  
@@ -26,8 +26,8 @@ function Hero() {
                 Действие в аниме Твое имя будет происходить в двух городах. Главными героями является парочка обычных людей, которые даже не подозревают, что вскоре судьба свяжет их жизни очень крепко. Они никогда не были знакомы, она – любимая дочь, которая свое свободное время посвящает работе в храме. Он – надежный друг, успешен и трудолюбив на работе, имеет неплохие задатки талантливого художника. 
                 </p>
                 <ul className='flex md:flex-row flex-col gap-x-8 gap-y-2 md:items-center'>
-                    <li><a href="#" className='text-white hover:text-[#ff1414] transition-all duration-300'>Mitsuha Miyamizu</a></li>
-                    <li><a href="#" className='text-white hover:text-[#ff1414] transition-all duration-300'>Taki Tachibana</a></li>
+                    <li><Link to="/actors/" className='text-white hover:text-[#ff1414] transition-all duration-300'>Mitsuha Miyamizu</Link></li>
+                    <li><Link to="/actors/" className='text-white hover:text-[#ff1414] transition-all duration-300'>Taki Tachibana</Link></li>
                 </ul>
                 <div className="flex items-center gap-4 mt-8">
                     <button className='flex gap-2 justify-center items-center group py-3 px-8 rounded-lg hover:scale-110 bg-[#ff1414] relative overflow-hidden transition-all duration-700'>
@@ -37,7 +37,7 @@ function Hero() {
                             <path d="M8 19L19 12L8 5V19Z"></path>
                         </svg>
                     </button>
-                    <a href="#" className='hover:text-[#ff1414] transition-all duration-300'>Подробнее</a>
+                    <Link to="/movies/" className='hover:text-[#ff1414] transition-all duration-300'>Подробнее</Link>
                 </div>
             </div>
         </section>

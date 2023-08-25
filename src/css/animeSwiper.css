@@ -1,0 +1,7 @@
+.swiper-wrapper {
+    width: 500%;
+    padding: 20px;
+    border-radius: 8px;
+    background: rgba(248, 247, 249, 0.10);
+    backdrop-filter: blur(4px);
+}
